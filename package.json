@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "npx eslint --ext .tsx --ext .ts src/ && npx tsc",
-    "start": "node ./prod/index.js",
+    "start": "vercel dev",
+    "deploy": "vercel deploy --prod",
     "dev": "npx cross-env NODE_ENV=development tsc-watch --onSuccess 'node --experimental-worker prod/index.js'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

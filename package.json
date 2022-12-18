@@ -2,10 +2,10 @@
   "name": "budgetapp-backend",
   "version": "1.0.0",
   "description": "",
-  "main": "prod/index.js",
+  "main": "index.ts",
   "scripts": {
     "build": "npx eslint --ext .tsx --ext .ts src/ && npx tsc",
-    "start": "nodemon prod/index.js",
+    "start": "nodemon index.ts",
     "dev": "npx cross-env NODE_ENV=development tsc-watch --onSuccess 'node --experimental-worker prod/index.js'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

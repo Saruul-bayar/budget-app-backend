@@ -3,8 +3,7 @@ import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
 import cookies from "cookie-parser";
-
-import { connectToDB } from "./models";
+import { connectToDB } from "./src/models/";
 
 dotenv.config();
 const app = express();
@@ -18,10 +17,10 @@ const main = async () => {
   // parse application/json
   app.use(bodyParser.json());
 
-  app.use("/auth", require("./routes/auth"));
-  app.use("/user", require("./routes/user"));
-  app.use("/orlogo", require("./routes/orlogo"));
-  app.use("/zarlaga", require("./routes/zarlaga"));
+  app.use("/auth", require("./src/routes/auth"));
+  app.use("/user", require("./src/routes/user"));
+  app.use("/orlogo", require("./src/routes/orlogo"));
+  app.use("/zarlaga", require("./src/routes/zarlaga"));
 
   app.get("/", (req, res) => {
     res.send("we are on home");

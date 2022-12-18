@@ -16,11 +16,11 @@ exports.connectToDB = void 0;
 const mongoose_1 = __importDefault(require("mongoose"));
 function connectToDB() {
     return __awaiter(this, void 0, void 0, function* () {
-        if (!process.env.DB_CONNECTION) {
-            console.error("DB_CONNECTION environment variable was not set");
+        if (!process.env.MONGODB_URI) {
+            console.error("MONGODB_URI environment variable was not set");
             process.exit(1);
         }
-        mongoose_1.default.connect(process.env.DB_CONNECTION, (err) => {
+        mongoose_1.default.connect(process.env.MONGODB_URI, (err) => {
             if (err)
                 console.error(err);
             else

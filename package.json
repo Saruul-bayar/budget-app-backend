@@ -2,7 +2,7 @@
   "name": "budgetapp-backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "prod/index.js",
   "scripts": {
     "build": "npx eslint --ext .tsx --ext .ts src/ && npx tsc",
     "start": "nodemon src/index.ts",
